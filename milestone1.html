@@ -22,9 +22,11 @@
     }
     .swiper-container {
       width: 100%;
-      height: 100%;
+      height: auto;
     }
     .swiper-slide {
+      width:auto;
+      height:auto;
       text-align: center;
       font-size: 18px;
       background: #fff;
@@ -51,7 +53,10 @@
     .swiper-pagination-bullet-active {
       opacity: 1;
     }	
-	
+    .swiper-container img {
+      width:100%;
+      height:auto;
+    }	
 
       /* Center slide text vertically */
       display: -webkit-box;
@@ -91,6 +96,7 @@
   <script>
 	var swiper = new Swiper('.swiper-container', {
       loop: true,
+      calculateHeight: true,
       autoplay: {
         delay: 5000,
         disableOnInteraction: true
